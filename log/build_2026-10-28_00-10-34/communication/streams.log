@@ -1,0 +1,22 @@
+[0.046s] Invoking command in '/home/aishyaae/iris_fp1_ws/build/communication': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/aishyaae/iris_fp1_ws/build/communication -- -j4 -l4
+[0.404s] [100%] Built target udp_sender
+[0.469s] Invoked command in '/home/aishyaae/iris_fp1_ws/build/communication' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/aishyaae/iris_fp1_ws/build/communication -- -j4 -l4
+[0.508s] Invoking command in '/home/aishyaae/iris_fp1_ws/build/communication': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/aishyaae/iris_fp1_ws/build/communication
+[0.546s] -- Install configuration: ""
+[0.548s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/lib/communication/udp_sender
+[0.550s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/ament_index/resource_index/package_run_dependencies/communication
+[0.551s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/ament_index/resource_index/parent_prefix_path/communication
+[0.552s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/environment/ament_prefix_path.sh
+[0.552s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/environment/ament_prefix_path.dsv
+[0.552s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/environment/path.sh
+[0.556s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/environment/path.dsv
+[0.556s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/local_setup.bash
+[0.556s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/local_setup.sh
+[0.556s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/local_setup.zsh
+[0.557s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/local_setup.dsv
+[0.559s] -- Installing: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/package.dsv
+[0.559s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/ament_index/resource_index/packages/communication
+[0.559s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/cmake/communicationConfig.cmake
+[0.560s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/cmake/communicationConfig-version.cmake
+[0.560s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/package.xml
+[0.569s] Invoked command in '/home/aishyaae/iris_fp1_ws/build/communication' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/aishyaae/iris_fp1_ws/build/communication

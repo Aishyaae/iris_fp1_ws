@@ -1,0 +1,24 @@
+[0.053s] Invoking command in '/home/aishyaae/iris_fp1_ws/build/communication': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/aishyaae/iris_fp1_ws/build/communication -- -j4 -l4
+[0.412s] [ 50%] Built target udp_sender
+[0.589s] [100%] Built target udp_receiver
+[0.634s] Invoked command in '/home/aishyaae/iris_fp1_ws/build/communication' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/aishyaae/iris_fp1_ws/build/communication -- -j4 -l4
+[0.682s] Invoking command in '/home/aishyaae/iris_fp1_ws/build/communication': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/aishyaae/iris_fp1_ws/build/communication
+[0.778s] -- Install configuration: ""
+[0.778s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/lib/communication/udp_sender
+[0.779s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/lib/communication/udp_receiver
+[0.782s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/ament_index/resource_index/package_run_dependencies/communication
+[0.782s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/ament_index/resource_index/parent_prefix_path/communication
+[0.784s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/environment/ament_prefix_path.sh
+[0.786s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/environment/ament_prefix_path.dsv
+[0.786s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/environment/path.sh
+[0.786s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/environment/path.dsv
+[0.788s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/local_setup.bash
+[0.788s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/local_setup.sh
+[0.788s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/local_setup.zsh
+[0.789s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/local_setup.dsv
+[0.789s] -- Installing: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/package.dsv
+[0.789s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/ament_index/resource_index/packages/communication
+[0.789s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/cmake/communicationConfig.cmake
+[0.793s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/cmake/communicationConfig-version.cmake
+[0.794s] -- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/package.xml
+[0.794s] Invoked command in '/home/aishyaae/iris_fp1_ws/build/communication' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/aishyaae/iris_fp1_ws/build/communication

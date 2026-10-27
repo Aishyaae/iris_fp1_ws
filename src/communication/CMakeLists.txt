@@ -12,9 +12,15 @@ find_package(std_msgs REQUIRED)
 
 add_executable(udp_sender src/udp_sender.cpp)
 ament_target_dependencies(udp_sender rclcpp std_msgs)
-install(TARGETS
-  udp_sender
-  DESTINATION lib/${PROJECT_NAME})
+
+add_executable(udp_receiver src/udp_receiver.cpp)
+ament_target_dependencies(udp_receiver rclcpp std_msgs)
+
+install(TARGETS 
+  udp_sender 
+  udp_receiver 
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.

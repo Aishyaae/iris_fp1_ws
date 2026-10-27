@@ -1,0 +1,110 @@
+[0.000000] (-) TimerEvent: {}
+[0.000758] (-) JobUnselected: {'identifier': 'autonomous_vehicle_nosecurity'}
+[0.000849] (-) JobUnselected: {'identifier': 'autonomous_vehicle_project'}
+[0.000884] (-) JobUnselected: {'identifier': 'autonomous_vehicle_simple'}
+[0.000910] (-) JobUnselected: {'identifier': 'autonomous_vehicle_teb'}
+[0.000934] (-) JobUnselected: {'identifier': 'avisengine_environment'}
+[0.000957] (-) JobUnselected: {'identifier': 'avisengine_resources'}
+[0.000979] (-) JobUnselected: {'identifier': 'can_sim_tc'}
+[0.001001] (-) JobUnselected: {'identifier': 'catvehicle'}
+[0.001025] (-) JobUnselected: {'identifier': 'catvehicle_gazebo'}
+[0.001046] (-) JobUnselected: {'identifier': 'catvehicle_gps_action'}
+[0.001069] (-) JobUnselected: {'identifier': 'catvehicle_tests'}
+[0.001092] (-) JobUnselected: {'identifier': 'cmdvel2gazebo'}
+[0.001118] (-) JobUnselected: {'identifier': 'control_toolbox'}
+[0.001140] (-) JobUnselected: {'identifier': 'dataspeed_can'}
+[0.001164] (-) JobUnselected: {'identifier': 'dataspeed_can_msg_filters'}
+[0.001197] (-) JobUnselected: {'identifier': 'dataspeed_can_tools'}
+[0.001223] (-) JobUnselected: {'identifier': 'dataspeed_can_usb'}
+[0.001246] (-) JobUnselected: {'identifier': 'dbw_mkz'}
+[0.001271] (-) JobUnselected: {'identifier': 'dbw_mkz_can'}
+[0.001310] (-) JobUnselected: {'identifier': 'dbw_mkz_description'}
+[0.001337] (-) JobUnselected: {'identifier': 'dbw_mkz_gazebo'}
+[0.001361] (-) JobUnselected: {'identifier': 'dbw_mkz_gui'}
+[0.001386] (-) JobUnselected: {'identifier': 'dbw_mkz_joystick_demo'}
+[0.001411] (-) JobUnselected: {'identifier': 'dbw_mkz_msgs'}
+[0.001436] (-) JobUnselected: {'identifier': 'drcsim_model_resources'}
+[0.001461] (-) JobUnselected: {'identifier': 'example_pkg'}
+[0.001494] (-) JobUnselected: {'identifier': 'iris_fira_simulation'}
+[0.001542] (-) JobUnselected: {'identifier': 'lusb'}
+[0.001565] (-) JobUnselected: {'identifier': 'master'}
+[0.001613] (-) JobUnselected: {'identifier': 'obstaclestopper'}
+[0.001864] (-) JobUnselected: {'identifier': 'rviz_satellite'}
+[0.001983] (-) JobUnselected: {'identifier': 'sicktoolbox'}
+[0.002070] (-) JobUnselected: {'identifier': 'sicktoolbox_wrapper'}
+[0.002137] (-) JobUnselected: {'identifier': 'stepvel'}
+[0.002212] (-) JobUnselected: {'identifier': 'teb_navigation_demo'}
+[0.002281] (-) JobUnselected: {'identifier': 'vision'}
+[0.002352] (communication) JobQueued: {'identifier': 'communication', 'dependencies': OrderedDict()}
+[0.002429] (communication) JobStarted: {'identifier': 'communication'}
+[0.022134] (communication) JobProgress: {'identifier': 'communication', 'progress': 'cmake'}
+[0.023605] (communication) JobProgress: {'identifier': 'communication', 'progress': 'build'}
+[0.025210] (communication) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/aishyaae/iris_fp1_ws/build/communication', '--', '-j4', '-l4'], 'cwd': '/home/aishyaae/iris_fp1_ws/build/communication', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'aishyaae', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/aishyaae', 'OLDPWD': '/home/aishyaae/iris_fp1_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2880', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/aishyaae/iris_fp1_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'aishyaae', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'aishyaae', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/aishyaae-ASUS:@/tmp/.ICE-unix/2739,unix/aishyaae-ASUS:/tmp/.ICE-unix/2739', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/0667e734_fdc5_4115_8480_24b00b2ce4e5', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.118', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/aishyaae/iris_fp1_ws/install/communication:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/aishyaae/iris_fp1_ws/build/communication', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/aishyaae/iris_fp1_ws/install/communication:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.084532] (communication) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099018] (-) TimerEvent: {}
+[0.199587] (-) TimerEvent: {}
+[0.300194] (-) TimerEvent: {}
+[0.400508] (-) TimerEvent: {}
+[0.501267] (-) TimerEvent: {}
+[0.601908] (-) TimerEvent: {}
+[0.702740] (-) TimerEvent: {}
+[0.743148] (communication) StdoutLine: {'line': b'-- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.802853] (-) TimerEvent: {}
+[0.878634] (communication) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.902717] (communication) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.903207] (-) TimerEvent: {}
+[0.932550] (communication) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.970622] (communication) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.003439] (-) TimerEvent: {}
+[1.104024] (-) TimerEvent: {}
+[1.154246] (communication) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.159756] (communication) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.204259] (-) TimerEvent: {}
+[1.304873] (-) TimerEvent: {}
+[1.358121] (communication) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.405022] (-) TimerEvent: {}
+[1.506344] (-) TimerEvent: {}
+[1.540256] (communication) StdoutLine: {'line': b'-- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[1.579326] (communication) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[1.606454] (-) TimerEvent: {}
+[1.706827] (-) TimerEvent: {}
+[1.807330] (-) TimerEvent: {}
+[1.811776] (communication) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.813990] (communication) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.814196] (communication) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.814639] (communication) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.816589] (communication) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.817353] (communication) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.819491] (communication) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.824330] (communication) StdoutLine: {'line': b'-- Configuring done (1.7s)\n'}
+[1.862099] (communication) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.873621] (communication) StdoutLine: {'line': b'-- Build files have been written to: /home/aishyaae/iris_fp1_ws/build/communication\n'}
+[1.908193] (-) TimerEvent: {}
+[1.963346] (communication) StdoutLine: {'line': b'[ 50%] Built target udp_sender\n'}
+[2.008635] (-) TimerEvent: {}
+[2.021981] (communication) StdoutLine: {'line': b'[100%] Built target udp_receiver\n'}
+[2.049233] (communication) CommandEnded: {'returncode': 0}
+[2.051587] (communication) JobProgress: {'identifier': 'communication', 'progress': 'install'}
+[2.067810] (communication) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/aishyaae/iris_fp1_ws/build/communication'], 'cwd': '/home/aishyaae/iris_fp1_ws/build/communication', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'aishyaae', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/aishyaae', 'OLDPWD': '/home/aishyaae/iris_fp1_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2880', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/aishyaae/iris_fp1_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'aishyaae', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'aishyaae', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/aishyaae-ASUS:@/tmp/.ICE-unix/2739,unix/aishyaae-ASUS:/tmp/.ICE-unix/2739', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/0667e734_fdc5_4115_8480_24b00b2ce4e5', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.118', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/aishyaae/iris_fp1_ws/install/communication:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/aishyaae/iris_fp1_ws/build/communication', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/aishyaae/iris_fp1_ws/install/communication:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[2.083362] (communication) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.085449] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/lib/communication/udp_sender\n'}
+[2.085826] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/lib/communication/udp_receiver\n'}
+[2.086392] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/ament_index/resource_index/package_run_dependencies/communication\n'}
+[2.086510] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/ament_index/resource_index/parent_prefix_path/communication\n'}
+[2.086813] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/environment/ament_prefix_path.sh\n'}
+[2.087179] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/environment/ament_prefix_path.dsv\n'}
+[2.087365] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/environment/path.sh\n'}
+[2.087519] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/environment/path.dsv\n'}
+[2.088888] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/local_setup.bash\n'}
+[2.090299] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/local_setup.sh\n'}
+[2.090498] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/local_setup.zsh\n'}
+[2.090676] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/local_setup.dsv\n'}
+[2.090828] (communication) StdoutLine: {'line': b'-- Installing: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/package.dsv\n'}
+[2.090960] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/ament_index/resource_index/packages/communication\n'}
+[2.091147] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/cmake/communicationConfig.cmake\n'}
+[2.092152] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/cmake/communicationConfig-version.cmake\n'}
+[2.094551] (communication) StdoutLine: {'line': b'-- Up-to-date: /home/aishyaae/iris_fp1_ws/install/communication/share/communication/package.xml\n'}
+[2.094992] (communication) CommandEnded: {'returncode': 0}
+[2.109378] (-) TimerEvent: {}
+[2.139653] (communication) JobEnded: {'identifier': 'communication', 'rc': 0}
+[2.141434] (-) EventReactorShutdown: {}
