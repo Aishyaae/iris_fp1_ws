@@ -1,4 +1,0 @@
-Invoking command in '/home/aishyaae/iris_fp1_ws/build/communication': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/aishyaae/iris_fp1_ws/build/communication -- -j4 -l4
-Invoked command in '/home/aishyaae/iris_fp1_ws/build/communication' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/aishyaae/iris_fp1_ws/build/communication -- -j4 -l4
-Invoking command in '/home/aishyaae/iris_fp1_ws/build/communication': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/aishyaae/iris_fp1_ws/build/communication
-Invoked command in '/home/aishyaae/iris_fp1_ws/build/communication' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/aishyaae/iris_fp1_ws/build/communication
