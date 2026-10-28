@@ -10,15 +10,15 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
-add_executable(udp_sender src/udp_sender.cpp)
-ament_target_dependencies(udp_sender rclcpp std_msgs)
+add_executable(udp_sender_node src/udp_sender.cpp)
+ament_target_dependencies(udp_sender_node rclcpp std_msgs)
 
-add_executable(udp_receiver src/udp_receiver.cpp)
-ament_target_dependencies(udp_receiver rclcpp std_msgs)
+add_executable(udp_receiver_node src/udp_receiver.cpp)
+ament_target_dependencies(udp_receiver_node rclcpp std_msgs)
 
 install(TARGETS 
-  udp_sender 
-  udp_receiver 
+  udp_sender_node
+  udp_receiver_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

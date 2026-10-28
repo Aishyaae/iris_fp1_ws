@@ -7,6 +7,24 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(OpenCV REQUIRED)
+
+add_executable(vision_node src/vision.cpp)
+
+ament_target_dependencies(vision_node
+  rclcpp
+  sensor_msgs
+  cv_bridge
+  OpenCV
+)
+
+install(TARGETS
+  vision_node
+  DESTINATION lib/${PROJECT_NAME}
+)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
