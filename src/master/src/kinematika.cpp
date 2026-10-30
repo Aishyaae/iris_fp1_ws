@@ -1,94 +1,92 @@
-#include <algorithm>
-#include <chrono>
-#include <cmath>
 #include <memory>
+#include <cmath>
+#include <algorithm>
 
 #include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/float64.hpp"
 #include "std_msgs/msg/int32_multi_array.hpp"
 
-// Kelas Controller PID
-class PIDController {
+using namespace std;
+
+class MasterNode : public rclcpp::Node {
 public:
-  PIDController(double kp, double ki, double kd)
-      : kp_(kp), ki_(ki), kd_(kd), prev_error_(0.0), integral_(0.0) {}
+  MasterNode() : Node("master_node") {
+    // subscribe ke data dari package vision
+    sub_angle = create_subscription<std_msgs::msg::Float64>(
+      "/vision/lane_angle",
+      10,
+      bind(&MasterNode::angle_callback, this, placeholders::_1)
+    );
 
-  double compute(double setpoint, double actual, double dt) {
-    if (dt <= 0.0) return 0.0;
-    double error = setpoint - actual;
-    integral_ += error * dt;
-    integral_ = std::clamp(integral_, -10.0, 10.0); // Anti-windup
-    double derivative = (error - prev_error_) / dt;
-    prev_error_ = error;
-    return (kp_ * error) + (ki_ * integral_) + (kd_ * derivative);
-  }
-
-  void reset() {
-    prev_error_ = 0.0;
-    integral_ = 0.0;
+    // publisher untuk mengirim hasil kalkulasi ke package communication
+    pub_control = create_publisher<std_msgs::msg::Int32MultiArray>("/master/geometry_control", 10);
+    
+    RCLCPP_INFO(this->get_logger(), "Master Node telah aktif dan mendengarkan data dari Vision.");
   }
 
 private:
-  double kp_, ki_, kd_;
-  double prev_error_;
-  double integral_;
-};
+    double kp = 1.5;
+    double ki = 0.05;
+    double kd = 0.4;
+    double kff = 1.0; // feedforward
 
-class SteeringControllerNode : public rclcpp::Node {
-public:
-  SteeringControllerNode() : Node("kinematika_node"), pid_(3.0, 0.01, 0.1) {
-    wheelbase_ = declare_parameter<double>("wheelbase", 2.62); // Wheelbase 2.62 m
+    double last_error = 0.0;
+    double integral_error = 0.0;
+    double dt = 0.05;
 
-    // Subscriber menerima target pergerakan dari Teleop
-    sub_target_ = create_subscription<std_msgs::msg::Int32MultiArray>(
-        "/cmd_target", 10,
-        std::bind(&SteeringControllerNode::target_callback, this, std::placeholders::_1));
+  void angle_callback(const std_msgs::msg::Float64::SharedPtr msg) {
+    double actual_angle = msg->data; // Sudut dalam derajat dari vision (-20 sampai +20)
+    double target_angle = 0.0; // lurus di tengah jalan
 
-    // Publisher mengirimkan hasil sudut halus PID balik ke Teleop
-    pub_smooth_ = create_publisher<std_msgs::msg::Int32MultiArray>("/cmd_smooth_motor", 10);
+    // hitung error
+    double error = target_angle - actual_angle;
 
-    // Timer loop PID 20 Hz (50 ms)
-    timer_ = create_wall_timer(
-        std::chrono::milliseconds(50),
-        std::bind(&SteeringControllerNode::control_loop, this));
+    double angle_rad = error * M_PI / 180.0;
 
-    RCLCPP_INFO(get_logger(), "Master PID Controller Aktif (Wheelbase: %.2f m)", wheelbase_);
+    // hitung proportional
+    double P = kp * sin(angle_rad);
+
+    // hitung integral
+    integral_error += error * dt;
+    double I = ki * integral_error;
+
+    // hitung derivative
+    double derivative = (error - last_error) / dt;
+    double D = kd * derivative;
+
+    double u_pid = P + I + D; // gabungan pid
+    double u_ff = kff * sin(angle_rad); // feedforward
+
+    double u_total = u_ff + u_pid; // instruksi daya final
+
+    int32_t steering_degree = static_cast<int32_t>(u_total * 45.0);
+    int32_t motor_pwm = static_cast<int32_t>(180.0 * cos(actual_angle * M_PI / 180.0));
+
+    last_error = error;
+
+    // clamp batas
+    steering_degree = clamp<int32_t>(steering_degree, -90, 90);
+    motor_pwm = clamp<int32_t>(motor_pwm, -255, 255);
+
+    // kemas data
+    std_msgs::msg::Int32MultiArray control_msg;
+    control_msg.data.clear();
+    control_msg.data.push_back(motor_pwm); // indeks[0] = pwm
+    control_msg.data.push_back(steering_degree); // indeks[1] = steering degree
+
+    pub_control->publish(control_msg);
+
+    RCLCPP_INFO(this->get_logger(), "Publish Int -> PWM: %d | Setir: %d deg", motor_pwm, steering_degree);
   }
 
-private:
-  void target_callback(const std_msgs::msg::Int32MultiArray::SharedPtr msg) {
-    if (msg->data.size() < 2) return;
-    target_pwm_ = msg->data[0];
-    target_steer_ = static_cast<double>(msg->data[1]);
-  }
-
-  void control_loop() {
-    double dt = 0.05; // 50 ms (20 Hz)
-
-    // Hitung PID untuk memperhalus pergerakan sudut belok
-    double steer_output = pid_.compute(target_steer_, actual_steer_, dt);
-    actual_steer_ += steer_output * dt;
-    actual_steer_ = std::clamp(actual_steer_, -45.0, 45.0);
-
-    // Kirim nilai PWM dan Steer hasil PID ke Teleop
-    std_msgs::msg::Int32MultiArray smooth_msg;
-    smooth_msg.data = {target_pwm_, static_cast<int32_t>(std::round(actual_steer_))};
-    pub_smooth_->publish(smooth_msg);
-  }
-
-  double wheelbase_;
-  int32_t target_pwm_ = 0;
-  double target_steer_ = 0.0;
-  double actual_steer_ = 0.0;
-
-  PIDController pid_;
-  rclcpp::Subscription<std_msgs::msg::Int32MultiArray>::SharedPtr sub_target_;
-  rclcpp::Publisher<std_msgs::msg::Int32MultiArray>::SharedPtr pub_smooth_;
-  rclcpp::TimerBase::SharedPtr timer_;
+  rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr sub_angle;
+  rclcpp::Publisher<std_msgs::msg::Int32MultiArray>::SharedPtr pub_control;
 };
 
 int main(int argc, char **argv) {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<SteeringControllerNode>());
+  auto node = make_shared<MasterNode>();
+  rclcpp::spin(node);
   rclcpp::shutdown();
   return 0;
 }
